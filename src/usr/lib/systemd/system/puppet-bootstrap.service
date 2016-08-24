@@ -1,0 +1,15 @@
+#
+# /usr/lib/systemd/system/puppet-bootstrap.service
+#
+#============================================================================
+
+[Unit]
+Description=Puppet bootstrap
+After=rc-local.service
+
+[Service]
+Type=idle
+ExecStart=/opt/puppet-bootstrap/bin/bootstrap.sh
+
+[Install]
+WantedBy=multi-user.target
