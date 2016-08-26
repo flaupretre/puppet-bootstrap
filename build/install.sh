@@ -6,6 +6,8 @@
 # $INSTALL_ROOT variable can be set by the calling environment and is optional.
 # If not set, everything will be installed relative to '/'.
 
+PRODUCT='puppet-bootstrap'
+
 #----------
 
 cd `dirname $0`/..
@@ -26,6 +28,7 @@ export BASE_DIR INSTALL_DIR
 
 cp -rp src/* $INSTALL_DIR
 
-chmod +x $INSTALL_DIR/opt/puppet-bootstrap/bin/*
+chmod +x $INSTALL_DIR/opt/$PRODUCT/bin/*
+chmod -x $INSTALL_DIR/usr/lib/systemd/system/$PRODUCT.service
 
 ###############################################################################

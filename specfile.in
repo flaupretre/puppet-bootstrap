@@ -26,5 +26,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%{prefix}/usr/lib/systemd/system/puppet-bootstrap.service
-%{prefix}/opt/puppet-bootstrap
+%{prefix}/usr/lib/systemd/system/%{name}.service
+%{prefix}/opt/%{name}

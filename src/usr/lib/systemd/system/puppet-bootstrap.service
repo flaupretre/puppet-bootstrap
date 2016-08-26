@@ -5,7 +5,7 @@
 
 [Unit]
 Description=Puppet bootstrap
-After=rc-local.service
+After=rc-local.service network-online.target
 
 [Service]
 Type=idle

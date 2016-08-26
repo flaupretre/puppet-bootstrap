@@ -4,7 +4,7 @@ When installing a system using foreman and puppet, the foreman template usually 
 
 Unfortunately :
 
-- The puppet service does not apply the catalog immediately after being started,
+- The puppet daemon does not apply the catalog immediately after being started,
 - nothing is displayed on the host console, puppet output is hidden and returned back to foreman via the puppet server.
 
 ## The solution
