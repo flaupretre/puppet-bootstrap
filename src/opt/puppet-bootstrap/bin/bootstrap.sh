@@ -15,8 +15,7 @@ echo
 echo "Please wait..."
 echo
 
-/opt/puppetlabs/bin/puppet agent -t --ignoreschedules --onetime --verbose \
-	--no-daemonize --no-usecacheonfailure --detailed-exitcodes --no-show_diff 2>&1 \
+/opt/puppetlabs/bin/puppet agent -t --ignoreschedules --no-show_diff 2>&1 \
 	| tee -a /var/log/puppet-bootstrap.log
 
 echo "========================================================================"
