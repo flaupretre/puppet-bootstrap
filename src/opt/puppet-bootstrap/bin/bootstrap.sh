@@ -20,7 +20,9 @@ status=$?
 echo "========================================================================"
 echo
 
-sysfunc svc_disable puppet-bootstrap >/dev/null 2>&1
+echo "Disabling puppet bootstrap"
+systemctl disable puppet-bootstrap
+mv /usr/lib/systemd/system/puppet-bootstrap.service /var/tmp # Security
 
 if [ $status != 0 ] ; then
 		echo "========================================================================"
