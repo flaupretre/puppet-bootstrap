@@ -20,13 +20,15 @@ status=$?
 echo "========================================================================"
 echo
 
-systemctl disable puppet-bootstrap
+sysfunc svc_disable puppet-bootstrap >/dev/null 2>&1
 
 if [ $status != 0 ] ; then
-        echo "Error(s) detected - Type <Enter> to reboot or ^C to login"
-        read a </dev/console
+		echo "========================================================================"
+        echo "Error(s) detected - Type <Enter> to login..."
+		echo "========================================================================"
+		echo
+else
+	echo "Rebooting..."
+	sleep 2
+	reboot
 fi
-
-echo "Rebooting..."
-sleep 2
-systemctl reboot
